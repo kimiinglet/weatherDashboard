@@ -1,114 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/style.css">
-
 </head>
 
 <body>
-    <!-- HEADER WEATHER DASHBOARD -->
-    <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand mb-0 h1">WEATHER DASHBOARD</span>
-    </nav>
-    <div id="container">
-        <!-- COLUMN 1 -->
-        <div id="inside-container">
-            <div class="row-search">
-                <div class="col-md-3">
-                    <!-- SEARCH BAR / SEARCH BTN-->
-                    <div class="search-container">
-                        <form action="/action_page.php">
-                            <input type="text" placeholder="Search.." name="search">
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                        </form>
-                    </div>
-                    <hr>
-                    <!-- LIST FOR RECENT SEARCHES -->
-                    <!-- <p tags to append each search> -->
-                    <p><button class="btn" id="aus">Austin</button></p>
-                    <p><button class="btn" id="sfo">San Francisco</button></p>
-                    <p><button class="btn" id="iah">Houston</button></p>
-                    <p><button class="btn" id="sea">Seattle</button></p>
-                    <p><button class="btn" id="atl">Atlanta</button></p>
-                </div>
-
-                <div class="col-md-9">
-
-                </div>
-            </div>
-            <!--COLUMN 2 -->
-            <!-- DISPLAY SEARCH INFORMATION -->
-            <div class="textbox">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quia porro odio provident,
-                    consequuntur aut optio reiciendis quo accusantium necessitatibus facere omnis. Odit iure quod
-                    commodi accusamus? Provident, deleniti necessitatibus?</p>
-            </div>
-
-            <!-- ROW 1 -->
-<div class="weatherBox">
-    <div class="column" id="currentCityWeather"><h6>Currently</h6>
+    <div id="searchContainer">
+        <input class="searchControl" type="text" placeholder="City Name or Zipcode" id="searchInput">
+        <button class="searchControl" id="searchBtn">Search</button>
     </div>
-            <!-- Column-md-12 <h2> 5 DAY FORCAST </h2> -->
-            <div class="column" id="day1FC">
-                <h4>Day 1</h4>
-                <h1 class="weatherTemp has-text-condition is-size-2" id="day1Temp">
-                </h1>
-                <h3 class="weatherCondition has-text-centered is-size-5" id="day1Condition">
-                    Day 1 Weather
-                </h3>
-            </div>
-            <div class="column-md-2" id="day2FC">
-                <h4>Day 2</h4>
-                <h1 class="weatherTemp has-text-condition is-size-2" id="day2Temp"></h1>
-                <h3 class="weatherCondition has-text-centered is-size-5" id="day2Condition">
-                    Day 2 Weather
-                </h3>
-            </div>
-            <div class="column-md-2" id="day3FC">
-                    <h4>Day 3</h4>
-                    <h1 class="weatherTemp has-text-condition is-size-2" id="day3Temp"></h1>
-                    <h3 class="weatherCondition has-text-centered is-size-5" id="day3Condition">
-                        Day 3 Weather
-                    </h3>
+    <div id="weatherContainer">
+        <div id="weatherDescription">
+            <h1 id="cityHeader"></h1>
+            <div id="weatherMain">
+                <div id="temperature">
                 </div>
-                <div class="column-md-2" id="day4FC">
-                        <h4>Day 4</h4>
-                        <h1 class="weatherTemp has-text-condition is-size-2" id="day4Temp"></h1>
-                        <h3 class="weatherCondition has-text-centered is-size-5" id="day4Condition">
-                            Day 4 Weather
-                        </h3>
-                    </div>
-                    <div class="column-md-2" id="day5FC">
-                            <h4>Day 5</h4>
-                            <h1 class="weatherTemp has-text-condition is-size-2" id="day5Temp"></h1>
-                            <h3 class="weatherCondition has-text-centered is-size-5" id="day5Condition">
-                                Day 5 Weather
-                            </h3>
-                        </div>
-                    </div>
-            <!-- ROW 2 -->
-
-            <!-- 5 DAY FORCAST -->
-            <!-- DATE/ICON/TEMP/HUMIDITY ON EACH BLOCK -->
+                <div id="weatherDescriptionHeader"></div>
+                <div><img id="documentIconImg"></div>
+            </div>
+            <hr>
+            <div id="windSpeed" class="bottomDetails"></div>
+            <div id="humidity" class="bottomDetails"></div> 
         </div>
     </div>
+
+
     <script src="script.js"></script>
-</body>
+ </body>
 
 </html>
