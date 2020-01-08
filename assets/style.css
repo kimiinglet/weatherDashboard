@@ -1,1 +1,16 @@
+header {
+    background-color: gray;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
 
+#recentBtns {
+    padding: 7px;
+}
+
+#searchContainer {
+    
+}
