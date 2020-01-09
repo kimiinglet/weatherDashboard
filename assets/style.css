@@ -4,13 +4,37 @@ header {
     text-align: center;
     padding: 15px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 40px;
 }
 
-#recentBtns {
-    padding: 7px;
+/* container */
+#container {
+    border:black;
+    border-style:solid;
+    margin: 20px;
+
+}
+/* search box */
+#searchBox {
+    border:slategray;
+    border-style:solid;
+    width: 20%;
+    height: 80%;
+    position: relative;
+    width:30%;
 }
 
-#searchContainer {
-    
+/* 5day forescast */
+#fiveDay {
+    border: slategray;
+    border-style: solid;
+    position: relative;
+}
+
+
+/* todays weather */
+#todayBox {
+    border: slategray;
+    border-style: solid;
+    position: relative;
 }

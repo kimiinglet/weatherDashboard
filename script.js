@@ -1,49 +1,12 @@
-//PUESDOCODE FOR WEATHER DASHBORED
+//PuesdoCode
 
-//WEATHER API $AJAX
-var apiKey = '69f15c00682d18316696a7296341bf67';
-var units = 'imperial';
-var searchMethod ='zip';
+//API KEY
+var APIKey = "69f15c00682d18316696a7296341bf67";
 
-// function searchWeather(searchTerm) {
-//     fetch(`http://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTerm}&APPID=${appID}&units=${units}`).then(result => {
-//         return result.json();
-//     }).then(result => {
-//         init(result);
-//     })
-// }
-//  function init(resultFromServer){
-//      console.log(resultFromServer);
-//  }
+//URL SEARCH CITY
+var queryURL = "https://api.openweathermap.org/data/2.5/weather?" + city + "&units=imperial&appid=" + APIKey;
 
-//  document.getElementById('searchBtn').addEventListener('click', () => {
-//      var searchTerm = document.getElementById('searchInput').nodeValue;
-//     if(searchTerm) {
-//         searchWeather(searchTerm);
-//     };
-//  })
-
-//SEARCH BUTTON FOR CITY
-    // SAVE IN LOCAL STOARGE
-
-    // POP UP 5 DAY FORECAST IN ITS OWN DIV
-    // 
-   
-// Get location 
-getLocation();
-
-function getLocation(){
-    if( navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    }
-    else {
-        alert("Location in not supported by the browser!");
-    }
-}
-
-function getWeather() {
-    $(document).ready(function(){
-        $.getJSON("http://api.openweathermap.org/data/2.5/weather?zip=")
-    })
-}
-    
+//Elements to variables
+var searchEl = $("#searchBtn");
+var tempEl = $("#temperature");
+var windSpeedEl 

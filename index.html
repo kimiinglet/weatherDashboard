@@ -1,49 +1,94 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yo DAYS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <!-- header -->
     <header>Weather Dashboard</header>
-    <div id="searchContainer">
-        <input class="searchControl" type="text" placeholder="City Name or Zipcode" id="searchInput">
-        <button class="searchControl" id="searchBtn">Search</button>
-    </div>
-    <div class="row">
-    <div class="col-md-4">
-    <div id="recentBtns">
-        <button class="ORD">Chicago</button><br>
-        <button class="SFO">San Francisco</button><br>
-        <button class="AUS">Austin</button><br>
-        <button class="SEA">Seattle</button><br>
-        <button class="ATL">Atlanta</button><br>
-        <button class="DEN">Denver</button><br>
-    </div>
-</div>
 
-
-    <!-- weather board forecast -->
-    <div class
-    <div id="weatherContainer">
-        <div id="weatherDescription">
-            <h1 id="cityHeader"></h1>
-            <div id="weatherMain">
-                <div id="temperature">
-                </div>
-                <div id="weatherDescriptionHeader"></div>
-                <div><img id="documentIconImg"></div>
+    <div id="container">
+        <!-- BOX_LEFT: Search bar -->
+        <div class="searchBox">
+            <div class=searchBtn><input type="text" placeholder="Search.." name="search2">
+                <button type="submit"><i class="fa fa-search"></i></button>
             </div>
             <hr>
-            <div id="temp" class="bottomDetails"></div>
-            <div id="humidity" class="bottomDetails"></div> 
+            <!-- Previous list -->
+            <div class="previousSearch"></div>
         </div>
+
+
+        <!-- BOX_TOP-RIGHT: Today information -->
+        <div id="todayBox">
+            <div id="today-info"> Lorem ipsum dolor sit amet consectetur adipisicing elit. In, incidunt tenetur! Itaque
+                eius
+                perspiciatis id vero voluptate officia blanditiis quidem illo amet hic, rem reprehenderit tempore ut
+                fuga
+                voluptatum explicabo?</div>
+        </div>
+
+        <!--BOX_BTM-RIGHT : 5 day forecast -->
+        <div id="fiveDay">
+            <div id="titleRow">
+                <h2>5 DAY FORECAST</h2>
+            </div>
+
+            <div id="forecast" class="day1">
+                <label id="date_1" class="date_1" for="">Day1</label>
+                <i class=""></i>
+                <label id="temp_1" class="temp_1" for="">Temp1</label>
+                <label id="humidity_1" class="humidity_1" for="">Humidity1</label>
+            </div>
+            <div id="forecast" class="day2">
+                <label id="date_2" class="date_2" for="">Day2</label>
+                <i class=""></i>
+                <label id="temp_2" class="temp_2" for="">Temp2</label>
+                <label id="humidity_2" class="humidity_2" for="">Humidity2</label>
+            </div>
+            <div id="forecast" class="day3">
+                <label id="date_3" class="date_3" for="">Day3</label>
+                <i class=""></i>
+                <label id="temp_3" class="temp_3" for="">Temp3</label>
+                <label id="humidity_3" class="humidity_3" for="">Humidity3</label>
+            </div>
+            <div id="forecast" class="day4">
+                <label id="date_4" class="date_14" for="">Day4</label>
+                <i class=""></i>
+                <label id="temp_4" class="temp_4" for="">Temp4</label>
+                <label id="humidity_4" class="humidity_4" for="">Humidity4</label>
+            </div>
+            <div id="forecast" class="day5">
+                <label id="date_5" class="date_5" for="">Day5</label>
+                <i class=""></i>
+                <label id="temp_5" class="temp_5" for="">Temp5</label>
+                <label id="humidity_5" class="humidity_5" for="">Humidity5</label>
+            </div>
+        </div>
+
     </div>
 
+    <script src="script.js">
+    </script>
 
-
-    <script src="script.js"></script>
- </body>
+</body>
 
 </html>
