@@ -1,5 +1,6 @@
 //API KEY
 var APIKey = "69f15c00682d18316696a7296341bf67";
+var city = $("#search_i");
 
 //URL SEARCH CITY
 var queryURL = "https://api.openweathermap.org/data/2.5/weather?" + city + "&units=imperial&appid=" + APIKey;
