@@ -23,33 +23,22 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 </head>
 
-<body>
+
+<div>
     <!-- header -->
-    <header id="header">
-        <h1 id="header">Weather Dashboard</h1>
-    </header>
-    <!-- container -->
+    <header>Weather Dashboard</header>
+<!-- container -->
     <div id="container">
         <div class="row">
-            <div class="col-md-6" id="searchBox">
-                <!-- search bar -->
-                <div id="search_col">
-                    <div id="search_cityRow">
-                        <h3>Search For a City</h3>
-                    </div>
-                    <!-- search button -->
-                    <div id="input_button">
-                        <input type="text" name="" id="search_i">
-                        <button class="seaBtn" id="searchB">
-                            <i class="fa fa-search"></i>
-                        </button>
-                        <button class="seaBtn" id="citiesB">
-                            <i class="fas fa-grip-lines"></i>
-                        </button>
-                    </div>
-                </div>
-                <hr>
-                <!-- City Buttons -->
+            <div class="col-md-6" id="leftColumn">
+                <h3>Search for a city</h3>
+                <!-- search form -->
+                <form id="inputBtn">
+                    <input type="text" name="" id="search">
+                    <button type="submit" id="searchB">Submit</button>
+                </form>
+            <hr>
+            <!-- City btns -->
                 <div class="citybtns" id="citybtns">
                     <button class="cities" data-city="Austin" for="">Austin</button>
                     <button class="cities" data-city="Chicago" for="">Chicago</button>
@@ -57,87 +46,79 @@
                     <button class="cities" data-city="Orlando" for="">Orlando</button>
                     <button class="cities" data-city="San Francisco" for="">San Francisco</button>
                     <button class="cities" data-city="Seattle" for="">Seattle</buttonbutton>
-                        <button class="cities" data-city="Denver" for="">Denver</button>
-                        <button class="cities" data-city="Atlanta" for="">Atlanta</button>
+                    <button class="cities" data-city="Denver" for="">Denver</button>
+                    <button class="cities" data-city="Atlanta" for="">Atlanta</button>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6" id="todayBox">
-
-                    <!-- "today temp" -->
-                    <div id="todayCol">
-                        <div id="todayRow">
-                            <div class="todayTemp" id="cityNameDate">
-                                <h2 id="city_name_date_h2">City Name Date </h2>
-                                <i class="" id="todayIcon"></i>
-                            </div>
-                            <div class="todayTemp" id="tempRow">
-                                <label id="temp_l" for="">Temperature</label>
-                            </div>
-                            <div class="todayTemp" id="humidityRow">
-                                <label id="humidity_l" for="">Humidity</label>
-                            </div>
-                            <div class="todayTemp" id="windRow">
-                                <label id="wind_speed_l" for="">Wind Speed</label>
-                            </div>
-                            <div class="todayTemp" id="uvRow">
-                                <label id="uv_index_l" for="">UV Index</label>
-                            </div>
+        <div class="row">
+            <div class="col-md-6" id="todayBox">
+                    <div id="todayRow">
+                        <div class="todayInfo" id="cityDetails">
+                            <h2>City Name</h2>
+                            <i class="" id="todayIcon"></i>
                         </div>
-                    </div>
-                </div>
-                    <!-- Forecast Row / 5 day Forecast -->
-                    <div class="col-md-6" id="5dayBox">
-                        <div id="forecastRow">
-                            <div id="forecastTitle">
-                                <h2>5-Day Forcast</h2>
-                            </div>
-                            <div id="forecast5Day">
-                                <!-- Day 1 -->
-                                <div class="forecast" id="day1">
-                                    <label class="date_l" id="date1" for="">Date</label>
-                                    <i class="fas fa-sun weather_icon" id="icon1"></i>
-                                    <label class="temperature_l" id="temp1" for="">Temperature</label>
-                                    <label class="humidity_l" id="humidity1" for="">Humidity</label>
-                                </div>
-                                <!-- Day 2 -->
-                                <div class="forecast" id="day2">
-                                    <label class="date_l" id="date2" for="">Date</label>
-                                    <i class="fas fa-sun weather_icon" id="icon2"></i>
-                                    <label class="temperature1" id="temp2" for="">Temperature</label>
-                                    <label class="humidity_l" id="humidity2" for="">Humidity</label>
-                                </div>
-                                <!-- Day 3 -->
-                                <div class="forecast" id="day3">
-                                    <label class="date_l" id="date3" for="">Date</label>
-                                    <i class="fas fa-sun weather_icon" id="icon3"></i>
-                                    <label class="temperature_l" id="temp3" for="">Temperature</label>
-                                    <label class="humidity_l" id="humidity3" for="">Humidity</label>
-                                </div>
-                                <!-- Day 4 -->
-                                <div class="forecast" id="day4">
-                                    <label class="date_l" id="date4" for="">Date</label>
-                                    <i class="fas fa-sun weather_icon" id="icon4"></i>
-                                    <label class="temperature_l" id="temp4" for="">Temperature</label>
-                                    <label class="humidity_l" id="humidity4" for="">Humidity</label>
-                                </div>
-                                <!-- Day 5 -->
-                                <div class="forecast" id="day5">
-                                    <label class="date_l" id="date5" for="">Date</label>
-                                    <i class="fas fa-sun weather_icon" id="icon5"></i>
-                                    <label class="temperature_l" id="temp5" for="">Temperature</label>
-                                    <label class="humidity_l" id="humidity5" for="">Humidity</label>
-                                </div>
-                            </div>
+                        <div class="todayInfo" id="tempRow">
+                            <label id="temp" for="">Temperature</label>
+                        </div>
+                        <div class="todayInfo" id="humidityRow">
+                            <label id="humidity" for="">Humidity</label>
+                        </div>
+                        <div class="todayInfo" id="windRow">
+                            <label id="windSpeed" for="">Wind Speed</label>
+                        </div>
+                        <div class="todayInfo" id="uvRow">
+                            <label id="uvIndex" for="">UV Index</label>
                         </div>
                     </div>
                 </div>
             </div>
-        
-    </div>
-
+        </div>
+            <!-- Forecast Row / 5 day Forecast -->
+            <div class="col-md-6" id="5dayBox">
+                <div id="forecastRow">
+                    <h2>5-Day Forcast</h2>  
+                    <div id="forecast5Day">
+                        <!-- Day 1 -->
+                        <div class="forecast" id="day1">
+                            <label class="date" id="date1" for="">Date</label>
+                            <i class="fas fa-sun weather_icon" id="icon1"></i>
+                            <label class="temperature1" id="temp1" for="">Temperature</label>
+                            <label class="humidity1" id="humidity1" for="">Humidity</label>
+                        </div>
+                        <!-- Day 2 -->
+                        <div class="forecast" id="day2">
+                            <label class="date" id="date2" for="">Date</label>
+                            <i class="fas fa-sun weather_icon" id="icon2"></i>
+                            <label class="temperature1" id="temp2" for="">Temperature</label>
+                            <label class="humidity1" id="humidity2" for="">Humidity</label>
+                        </div>
+                        <!-- Day 3 -->
+                        <div class="forecast" id="day3">
+                            <label class="date" id="date3" for="">Date</label>
+                            <i class="fas fa-sun weather_icon" id="icon3"></i>
+                            <label class="temperature1" id="temp3" for="">Temperature</label>
+                            <label class="humidity1" id="humidity3" for="">Humidity</label>
+                        </div>
+                        <!-- Day 4 -->
+                        <div class="forecast" id="day4">
+                            <label class="date" id="date4" for="">Date</label>
+                            <i class="fas fa-sun weather_icon" id="icon4"></i>
+                            <label class="temperature1" id="temp4" for="">Temperature</label>
+                            <label class="humidity1" id="humidity4" for="">Humidity</label>
+                        </div>
+                        <!-- Day 5 -->
+                        <div class="forecast" id="day5">
+                            <label class="date" id="date5" for="">Date</label>
+                            <i class="fas fa-sun weather_icon" id="icon5"></i>
+                            <label class="temperature1" id="temp5" for="">Temperature</label>
+                            <label class="humidity1" id="humidity5" for="">Humidity</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="script.js"></script>
+    
 </body>
-
 </html>
