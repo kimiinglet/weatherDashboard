@@ -109,6 +109,26 @@ searchBtn.on("click", function(e){
     .then(function(data) {
       console.log(data)
 
+      date1.innerHTML = moment().add(1, 'days').calendar();
+      temperature1.innerHTML = data.list[0].main.temp 
+      humidity1.innerHTML = data.list[0].main.humidity
+      
+      // date2.innerHTML = 
+      temperature2.innerHTML = data.list[7].main.temp
+      humidity2.innerHTML = data.list[7].main.humidity
+
+      // date3.innerHTML = 
+      temperature3.innerHTML = data.list[14].main.temp
+      humidity3.innerHTML = data.list[14].main.humidity
+
+      // date4.innerHTML = 
+      temperature4.innerHTML = data.list[22].main.temp
+      humidity4.innerHTML = data.list[22].main.humidity
+
+      // date5.innerHTML = 
+      temperature5.innerHTML = data.list[30].main.temp
+      humidity5.innerHTML = data.list[30].main.humidity
+
     })
 
 })
