@@ -1,11 +1,10 @@
 //API KEY
 var APIKey = "69f15c00682d18316696a7296341bf67";
 
+var temperature = document.getElementById("temp");
 var humidity = document.getElementById("humidity");
 var windSpeed = document.getElementById("windSpeed");
 var uvIndex = document.getElementById("uvIndex");
-
-
 
 // Todays date;
 var today = new Date();
@@ -18,13 +17,9 @@ document.write(today);
 
 
 
-
 //search button
 var searchBtn = $("#searchB");
 // let searchBtn = document.getElementById("searchB")
-
-
-
 
 
 //when the document loads ->
@@ -49,8 +44,10 @@ $(document).ready(function(){
             // After the data comes back from the API
             .then(function(data) {
                 console.log(data)
+                
+              temperature.innerHTML = data.main.temp
               humidity.innerHTML = data.main.humidity
-              windSpeed.innerHTML = data.wind.speed 
+              windSpeed.innerHTML = data.wind.speed
               
               let long = data.coord.lon
               let lat = data.coord.lat
