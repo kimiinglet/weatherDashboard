@@ -9,6 +9,7 @@ function getSearchMethod(searchTerm) {
   searchMethod = 'q'
 }
 
+
 // city buttons
 var austinEl = $("#Austin");
 var chicagoEl = $("#Chicago");
@@ -102,6 +103,11 @@ $(document).ready(function(){
                 uvIndex.innerHTML = data.value
               }
             )
+
+            //weather icon
+          // var weatherIcon = document.getElementById('documentIconImg');
+          // weatherIcon.src = `http://openweathermap.org/img/w/` + data.weather[0].icon + '.png';
+
 })
 })
 

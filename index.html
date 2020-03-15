@@ -20,15 +20,15 @@
         <div class="uk-container uk-margin-top uk-container-center">
 
         <!-- search and buttons -->
-        <div class="uk-panel uk-panel-box uk-flex uk-margin-left">
-        <div class="uk-card uk-card-default uk-card-body" >
+        <div class="uk-panel uk-panel-box uk-flex uk-margin-left uk-margin-right" id="firstBox">
+        <div class="uk-card uk-card-default uk-card-body" id="searchAndBtns">
             <div class="col-md-6" id="leftColumn">
                 Search for a city
                 <!-- search form -->
                 <div id=searchbox>
                     <form id="inputBtn" class="uk-search uk-search-default">
                         <input type="text" class="uk-search-input" id="search">
-                        <button class="uk-button-primary" type="submit" id="searchB">Submit</button>
+                        <button class="uk-button uk-button-primary" type="submit" id="searchB">Submit</button>
                     </form>
                     <hr>
                     <!-- city buttons -->
@@ -45,12 +45,13 @@
         </div>
 
         <!-- todays temperature -->
-        <div class="uk-card uk-card-default uk-card-body uk-margin-left">
+        <div class="uk-card uk-card-default uk-card-body uk-margin-left" id="todayFromSearch">
             <div class="col-md-6" id="todayBox">
                 <div id="todayRow">
-                    <div class="todayInfo" id="cityName">
+                    <div class="todayInfo uk-text-large uk-text-center" id="cityName">
                         <label id="cityInputed" for="">City</label>
                     </div>
+                    <div><img class="documentIconImg"></div>
                     <div class="todayInfo" id="tempRow">
                         Temperature: <label id="temp" for=""></label>
                     </div>
@@ -74,8 +75,9 @@
         <div class="uk-flex-inline uk-animation-fade">
 
             <!-- day 1 -->
-            <div class="uk-card uk-card-default uk-card-body uk-animation-slide-top">
+            <div class="uk-card uk-card-default uk-card-body uk-animation-slide-top" id="dayBox1">
                 <label class="date" id="date1">Date</label>
+                <div><img class="documentIconImg"></div>
                 <div class="forecast" id="day1">
                     <i class="fas fa-sun weatherIcon" id="icon1"></i>
                     Temperature: <label class="temperature1" id="temp1"></label><br>
@@ -84,8 +86,9 @@
             </div>
 
             <!-- day 2 -->
-            <div class="uk-card uk-card-default uk-card-body uk-margin-left uk-animation-slide-top">
+            <div class="uk-card uk-card-default uk-card-body uk-margin-left uk-animation-slide-top" id="dayBox2"> 
                 <label class="date" id="date2">Date</label>
+                <div><img class="documentIconImg"></div>
                 <div class="forecast" id="day2">
                     <i class="fas fa-sun weatherIcon" id="icon2"></i>
                     Temperature: <label class="temperature1" id="temp2"></label><br>
@@ -94,8 +97,9 @@
             </div>
 
             <!-- day 3 -->
-            <div class="uk-card uk-card-default uk-card-body uk-margin-left uk-animation-slide-top">
+            <div class="uk-card uk-card-default uk-card-body uk-margin-left uk-animation-slide-top" id="dayBox3">
                 <label class="date" id="date3">Date</label>
+                <div><img class="documentIconImg"></div>
                 <div class="forecast" id="day3">
                     <i class="fas fa-sun weatherIcon" id="icon3"></i>
                     Temperature: <label class="temperature1" id="temp3"></label><br>
@@ -104,8 +108,9 @@
             </div>
 
              <!-- day 4 -->
-            <div class="uk-card uk-card-default uk-card-body uk-margin-left uk-animation-slide-top">
+            <div class="uk-card uk-card-default uk-card-body uk-margin-left uk-animation-slide-top" id="dayBox4">
                 <label class="date" id="date4">Date</label>
+                <div><img class="documentIconImg"></div>
                 <div class="forecast" id="day4">
                     <i class="fas fa-sun weatherIcon" id="icon4"></i>
                     Temperature: <label class="temperature1" id="temp4"></label><br>
@@ -114,8 +119,9 @@
             </div>
 
             <!-- day 5 -->
-            <div class="uk-card uk-card-default uk-card-body uk-margin-left uk-animation-slide-top">
+            <div class="uk-card uk-card-default uk-card-body uk-margin-left uk-animation-slide-top" id="dayBox5">
                 <label class="date" id="date5">Date</label>
+                <div><img class="documentIconImg"></div>
                 <div class="forecast" id="day5">
                     <i class="fas fa-sun weatherIcon" id="icon5"></i>
                     Temperature: <label class="temperature1" id="temp5"></label><br>
