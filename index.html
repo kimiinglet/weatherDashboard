@@ -9,118 +9,131 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.6/dist/css/uikit.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.6/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.6/dist/js/uikit-icons.min.js"></script>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-
-    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" /> -->
 </head>
 
 <body>
- <div>
-    <!-- header -->
-    <header>Weather Dashboard</header>
+    <div>
+        <div class="uk-background-cover uk-height-large uk-panel uk-flex uk-flex-center uk-flex-middle"
+            style="background-image: url(/assets/Images/rain.jpg);">
+            <p class="uk-h4 ">Weather Dashboard</p>
+        </div>
+    </div>
+
     <!-- container -->
-    <div id="container">
-        <div class="row">
+    <div id="uk-container uk-container-center uk-margin-top">
+        <div class="uk-container uk-container-small uk-margin-auto">
+
+        <!-- search and buttons -->
+        <div class="uk-panel uk-panel-box uk-flex uk-margin-left">
+        <div class="uk-card uk-card-default uk-card-body">
             <div class="col-md-6" id="leftColumn">
-                <h3>Search for a city</h3>
+                Search for a city
                 <!-- search form -->
                 <div id=searchbox>
-                    <form id="inputBtn">
-                        <input type="text" name="" id="search">
-                        <button type="submit" id="searchB">Submit</button>
+                    <form id="inputBtn" class="uk-search uk-search-default">
+                        <input type="text" class="uk-search-input" id="search">
+                        <button class="uk-button-primary" type="submit" id="searchB">Submit</button>
                     </form>
                     <hr>
-                    <!-- City btns -->
+                    City btns
                     <div class="citybtns" id="citybtns">
                         <button class="cities" id="Austin" for="">Austin</button>
                         <button class="cities" id="Chicago" for="">Chicago</button>
-                        <button class="cities" id="San " for="">San Francisco</button>
                         <button class="cities" id="Atlanta" for="">Atlanta</button>
+                        <button class="cities" id="Houston" for="">Houston</button>
+                        <button class="cities" id="sfo" for="">San Francisco</button>
+
                     </div>
                 </div>
             </div>
         </div>
-            <div class="row">
-                <div class="col-md-6" id="todayBox">
-                    <div id="todayRow">
-                        <div class="todayInfo" id="cityDetails">
-                            <h2>City Name</h2>
-            
-                        </div>
-                        <div class="todayInfo" id="tempRow">
-                            <label id="temp" for="">Temperature</label>
-                        </div>
-                        <div class="todayInfo" id="humidityRow">
-                            <label id="humidity" for="">Humidity</label>
-                        </div>
-                        <div class="todayInfo" id="windRow">
-                            <label id="windSpeed" for="">Wind Speed</label>
-                        </div>
-                        <div class="todayInfo" id="uvRow">
-                            <label id="uvIndex" for="">UV Index</label>
-                        </div>
+
+        <!-- todays temperature -->
+        <div class="uk-card uk-card-default uk-card-body uk-margin-left">
+            <div class="col-md-6" id="todayBox">
+                <div id="todayRow">
+                    <div class="todayInfo" id="cityName">
+                        <label id="cityInputed" for="">City</label>
                     </div>
+                    <div class="todayInfo" id="tempRow">
+                        <label id="temp" for="">Temperature</label>
+                    </div>
+                    <div class="todayInfo" id="humidityRow">
+                        <label id="humidity" for="">Humidity</label>
+                    </div>
+                    <div class="todayInfo" id="windRow">
+                        <label id="windSpeed" for="">Wind Speed</label>
+                    </div>
+                    <div class="todayInfo" id="uvRow">
+                        <label id="uvIndex" for="">UV Index</label>
+                    </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    
+    <!-- Forecast Row / 5 day Forecast -->
+    <div class="uk-container uk-container-small" id="5dayBox">
+        <h2>5-Day Forcast</h2>
+        <div class="uk-flex">
+            <div class="uk-card uk-card-default uk-card-body">
+
+                <!-- day 1 -->
+                <label class="date" id="date1">Date</label>
+                <div class="forecast" id="day1">
+                    <i class="fas fa-sun weatherIcon" id="icon1"></i>
+                    <label class="temperature1" id="temp1">Temperature</label><br>
+                    <label class="humidity1" id="humidity1">Humidity</label>
                 </div>
             </div>
-        <!-- Forecast Row / 5 day Forecast -->
-        <div class="col-md-6" id="5dayBox">
-            <div id="forecastRow">
-                <h2>5-Day Forcast</h2>
-                <div id="forecast5Day">
-                    <!-- Day 1 -->
-                    <div class="forecast" id="day1">
-                        <label class="date" id="date1">Date</label>
-                        <i class="fas fa-sun weatherIcon" id="icon1"></i>
-                        <label class="temperature1" id="temp1">Temperature</label>
-                        <label class="humidity1" id="humidity1">Humidity</label>
-                    </div>
-                    <!-- Day 2 -->
-                    <div class="forecast" id="day2">
-                        <label class="date" id="date2">Date</label>
-                        <i class="fas fa-sun weatherIcon" id="icon2"></i>
-                        <label class="temperature1" id="temp2">Temperature</label>
-                        <label class="humidity1" id="humidity2">Humidity</label>
-                    </div>
-                    <!-- Day 3 -->
-                    <div class="forecast" id="day3">
-                        <label class="date" id="date3">Date</label>
-                        <i class="fas fa-sun weatherIcon" id="icon3"></i>
-                        <label class="temperature1" id="temp3">Temperature</label>
-                        <label class="humidity1" id="humidity3">Humidity</label>
-                    </div>
-                    <!-- Day 4 -->
-                    <div class="forecast" id="day4">
-                        <label class="date" id="date4">Date</label>
-                        <i class="fas fa-sun weatherIcon" id="icon4"></i>
-                        <label class="temperature1" id="temp4">Temperature</label>
-                        <label class="humidity1" id="humidity4">Humidity</label>
-                    </div>
-                    <!-- Day 5 -->
-                    <div class="forecast" id="day5">
-                        <label class="date" id="date5">Date</label>
-                        <i class="fas fa-sun weatherIcon" id="icon5"></i>
-                        <label class="temperature1" id="temp5">Temperature</label>
-                        <label class="humidity1" id="humidity5">Humidity</label>
-                    </div>
+
+            <!-- day 2 -->
+            <div class="uk-card uk-card-default uk-card-body uk-margin-left">
+                <label class="date" id="date2">Date</label>
+                <div class="forecast" id="day2">
+                    <i class="fas fa-sun weatherIcon" id="icon2"></i>
+                    <label class="temperature1" id="temp2">Temperature</label><br>
+                    <label class="humidity1" id="humidity2">Humidity</label>
+                </div>
+            </div>
+
+            <!-- day 3 -->
+            <div class="uk-card uk-card-default uk-card-body uk-margin-left">
+                <label class="date" id="date3">Date</label>
+                <div class="forecast" id="day3">
+                    <i class="fas fa-sun weatherIcon" id="icon3"></i>
+                    <label class="temperature1" id="temp3">Temperature</label><br>
+                    <label class="humidity1" id="humidity3">Humidity</label>
+                </div>
+            </div>
+
+             <!-- day 4 -->
+            <div class="uk-card uk-card-default uk-card-body uk-margin-left">
+                <label class="date" id="date4">Date</label>
+                <div class="forecast" id="day4">
+                    <i class="fas fa-sun weatherIcon" id="icon4"></i>
+                    <label class="temperature1" id="temp4">Temperature</label><br>
+                    <label class="humidity1" id="humidity4">Humidity</label>
+                </div>
+            </div>
+
+            <!-- day 5 -->
+            <div class="uk-card uk-card-default uk-card-body uk-margin-left">
+                <label class="date" id="date5">Date</label>
+                <div class="forecast" id="day5">
+                    <i class="fas fa-sun weatherIcon" id="icon5"></i>
+                    <label class="temperature1" id="temp5">Temperature</label><br>
+                    <label class="humidity1" id="humidity5">Humidity</label>
                 </div>
             </div>
         </div>
     </div>
+</div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="script.js"></script>
 
-    </body>
+</body>
 
 </html>
