@@ -13,19 +13,19 @@
 
 <body>
     <div>
-        <div class="uk-background-cover uk-height-large uk-panel uk-flex uk-flex-center uk-flex-middle"
+        <div class="uk-background-cover uk-height-large uk-flex uk-flex-center uk-flex-middle"
             style="background-image: url(/assets/Images/rain.jpg);">
             <p class="uk-h4 ">Weather Dashboard</p>
         </div>
     </div>
 
     <!-- container -->
-    <div id="uk-container uk-container-center uk-margin-top">
+    <div id="uk-container uk-container-center uk-margin-top uk-width-auto">
         <div class="uk-container uk-container-small uk-margin-auto">
 
         <!-- search and buttons -->
         <div class="uk-panel uk-panel-box uk-flex uk-margin-left">
-        <div class="uk-card uk-card-default uk-card-body">
+        <div class="uk-card uk-card-default uk-card-body" >
             <div class="col-md-6" id="leftColumn">
                 Search for a city
                 <!-- search form -->
@@ -56,16 +56,16 @@
                         <label id="cityInputed" for="">City</label>
                     </div>
                     <div class="todayInfo" id="tempRow">
-                        <label id="temp" for="">Temperature</label>
+                        Temperature: <label id="temp" for=""></label>
                     </div>
                     <div class="todayInfo" id="humidityRow">
-                        <label id="humidity" for="">Humidity</label>
+                        Humidity: <label id="humidity" for=""></label>
                     </div>
                     <div class="todayInfo" id="windRow">
-                        <label id="windSpeed" for="">Wind Speed</label>
+                       Wind Speed: <label id="windSpeed" for=""></label>
                     </div>
                     <div class="todayInfo" id="uvRow">
-                        <label id="uvIndex" for="">UV Index</label>
+                        UV Index: <label id="uvIndex" for=""></label>
                     </div>
             </div>
             </div>
@@ -75,57 +75,57 @@
 
     
     <!-- Forecast Row / 5 day Forecast -->
-    <div class="uk-container uk-container-small" id="5dayBox">
+    <div class="uk-container uk-width-auto" id="5dayBox">
         <h2>5-Day Forcast</h2>
-        <div class="uk-flex">
-            <div class="uk-card uk-card-default uk-card-body">
+        <div class="uk-flex-inline uk-animation-fade">
 
-                <!-- day 1 -->
+            <!-- day 1 -->
+            <div class="uk-card uk-card-default uk-card-body uk-animation-slide-top">
                 <label class="date" id="date1">Date</label>
                 <div class="forecast" id="day1">
                     <i class="fas fa-sun weatherIcon" id="icon1"></i>
-                    <label class="temperature1" id="temp1">Temperature</label><br>
-                    <label class="humidity1" id="humidity1">Humidity</label>
+                    Temperature: <label class="temperature1" id="temp1"></label><br>
+                    Humidity: <label class="humidity1" id="humidity1"></label>
                 </div>
             </div>
 
             <!-- day 2 -->
-            <div class="uk-card uk-card-default uk-card-body uk-margin-left">
+            <div class="uk-card uk-card-default uk-card-body uk-margin-left uk-animation-slide-top">
                 <label class="date" id="date2">Date</label>
                 <div class="forecast" id="day2">
                     <i class="fas fa-sun weatherIcon" id="icon2"></i>
-                    <label class="temperature1" id="temp2">Temperature</label><br>
-                    <label class="humidity1" id="humidity2">Humidity</label>
+                    Temperature: <label class="temperature1" id="temp2"></label><br>
+                    Humidity: <label class="humidity1" id="humidity2"></label>
                 </div>
             </div>
 
             <!-- day 3 -->
-            <div class="uk-card uk-card-default uk-card-body uk-margin-left">
+            <div class="uk-card uk-card-default uk-card-body uk-margin-left uk-animation-slide-top">
                 <label class="date" id="date3">Date</label>
                 <div class="forecast" id="day3">
                     <i class="fas fa-sun weatherIcon" id="icon3"></i>
-                    <label class="temperature1" id="temp3">Temperature</label><br>
-                    <label class="humidity1" id="humidity3">Humidity</label>
+                    Temperature: <label class="temperature1" id="temp3"></label><br>
+                    Humidity: <label class="humidity1" id="humidity3"></label>
                 </div>
             </div>
 
              <!-- day 4 -->
-            <div class="uk-card uk-card-default uk-card-body uk-margin-left">
+            <div class="uk-card uk-card-default uk-card-body uk-margin-left uk-animation-slide-top">
                 <label class="date" id="date4">Date</label>
                 <div class="forecast" id="day4">
                     <i class="fas fa-sun weatherIcon" id="icon4"></i>
-                    <label class="temperature1" id="temp4">Temperature</label><br>
-                    <label class="humidity1" id="humidity4">Humidity</label>
+                    Temperature: <label class="temperature1" id="temp4"></label><br>
+                    Humidity: <label class="humidity1" id="humidity4"></label>
                 </div>
             </div>
 
             <!-- day 5 -->
-            <div class="uk-card uk-card-default uk-card-body uk-margin-left">
+            <div class="uk-card uk-card-default uk-card-body uk-margin-left uk-animation-slide-top">
                 <label class="date" id="date5">Date</label>
                 <div class="forecast" id="day5">
                     <i class="fas fa-sun weatherIcon" id="icon5"></i>
-                    <label class="temperature1" id="temp5">Temperature</label><br>
-                    <label class="humidity1" id="humidity5">Humidity</label>
+                    Temperature: <label class="temperature1" id="temp5"></label><br>
+                    Humidity: <label class="humidity1" id="humidity5"></label>
                 </div>
             </div>
         </div>
