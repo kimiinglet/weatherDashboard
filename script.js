@@ -80,7 +80,7 @@ $(document).ready(function(){
             //Perform AJAX for uvIndex
               $.ajax({
                 url: uvIndexURL,
-                method: "GET"
+                method: "GET",
               })
               .then(function(data) {
                 uvIndex.innerHTML = data.value
@@ -102,15 +102,15 @@ searchBtn.on("click", function(e){
     // construct a url for api from the information we got from the html input
     $.ajax({
       url: queryForcast,
-      method: "GET"
+      method: "GET",
     })
 
     // After the data comes back from the API
     .then(function(data) {
       console.log(data)
 
-      date1.innerHTML = moment().add(1, 'days').calendar();
-      temperature1.innerHTML = data.list[0].main.temp 
+      // date1.innerHTML = 
+      temperature1.innerHTML = data.list[0].main.temp
       humidity1.innerHTML = data.list[0].main.humidity
       
       // date2.innerHTML = 
