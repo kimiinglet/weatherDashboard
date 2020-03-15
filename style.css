@@ -3,6 +3,14 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     color: white;
-    background-position: cover;
 }
+
+/* #searchbox {
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 1px 5px black;
+    padding: 50px;
+    border-radius: 10px;
+    position: absolute;
+    margin-top: 20%;
+} */
 
