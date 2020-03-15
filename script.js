@@ -1,5 +1,13 @@
 //API KEY
 var APIKey = "69f15c00682d18316696a7296341bf67";
+var searchMethod;
+
+function getSearchMethod(searchTerm) {
+  if(searchTerm.length === 5 && Number.parseInt(searchTerm) + '' === searchTerm)
+  searchMethod = 'zip';
+  else
+  searchMethod = 'q'
+}
 
 // city buttons
 var austinEl = $("#Austin");
@@ -75,7 +83,6 @@ $(document).ready(function(){
 
       // After the data comes back from the API
       .then(function(data) {
-          console.log(data)   
         cityEl.innerHTML = data.name
         temperature.innerHTML = data.main.temp
         humidity.innerHTML = data.main.humidity

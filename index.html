@@ -7,21 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- UIKit -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.6/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.6/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.6/dist/js/uikit-icons.min.js"></script>
 </head>
 
 <body>
-    <div>
-        <div class="uk-background-cover uk-height-large uk-flex uk-flex-center uk-flex-middle"
-            style="background-image: url(/assets/Images/rain.jpg);">
-            <p class="uk-h4 ">Weather Dashboard</p>
-        </div>
-    </div>
-
+    <div class="uk-position-cover uk-overlay-primary" style="background-image: url(assets/images/rain.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;"">
     <!-- container -->
     <div id="uk-container uk-container-center uk-margin-top uk-width-auto">
-        <div class="uk-container uk-container-small uk-margin-auto">
+        <div class="uk-container">
 
         <!-- search and buttons -->
         <div class="uk-panel uk-panel-box uk-flex uk-margin-left">
@@ -35,7 +30,7 @@
                         <button class="uk-button-primary" type="submit" id="searchB">Submit</button>
                     </form>
                     <hr>
-                    City btns
+                    <!-- city buttons -->
                     <div class="citybtns" id="citybtns">
                         <button class="cities" id="Austin" for="">Austin</button>
                         <button class="cities" id="Chicago" for="">Chicago</button>
@@ -67,7 +62,7 @@
                     <div class="todayInfo" id="uvRow">
                         UV Index: <label id="uvIndex" for=""></label>
                     </div>
-            </div>
+                </div>
             </div>
         </div>
         </div>
@@ -131,9 +126,10 @@
         </div>
     </div>
 </div>
+</div>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="script.js"></script>
 
 </body>
-
 </html>

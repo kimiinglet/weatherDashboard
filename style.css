@@ -1,0 +1,8 @@
+body {
+    background-image: url("assets/images/rain.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    background-position: cover;
+}
+
