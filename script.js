@@ -110,9 +110,6 @@ $(document).ready(function(){
               }
             )
 
-            //weather icon
-          // var weatherIcon = document.getElementById('documentIconImg');
-          // weatherIcon.src = `http://openweathermap.org/img/w/` + data.weather[0].icon + '.png';
 
 })
 })
