@@ -57,7 +57,6 @@ var yyyy = today.getYear();
 // document.write(today);
 
 
-
 //search button
 var searchBtn = $("#searchB");
 // let searchBtn = document.getElementById("searchB")
@@ -86,11 +85,11 @@ $(document).ready(function(){
       .then(function(data) {
         cityEl.innerHTML = data.name
 
-        //Kelvin to Fahrenheit
-        var tempKelvin= data.main.temp
-        var tempCelsius = tempKelvin - 273;
-        var tempFahrenheit = tempCelsius * (9/5) + 32;
-        var Fahrenheit = Math.floor(tempFahrenheit)
+         //Kelvin to Fahrenheit
+          var tempKelvin= data.main.temp
+          var tempCelsius = tempKelvin - 273;
+          var tempFahrenheit = tempCelsius * (9/5) + 32;
+          var Fahrenheit = Math.floor(tempFahrenheit)
 
         temperature.innerHTML = Fahrenheit;
         humidity.innerHTML = data.main.humidity
@@ -138,24 +137,57 @@ searchBtn.on("click", function(e){
     .then(function(data) {
       console.log(data)
 
-      // date1.innerHTML = 
-      temperature1.innerHTML = data.list[0].main.temp
+  
+       //Kelvin to Fahrenheit Day 1
+      var tempKelvin= data.list[0].main.temp
+      var tempCelsius = tempKelvin - 273;
+      var tempFahrenheit = tempCelsius * (9/5) + 32;
+      var Fahrenheit = Math.floor(tempFahrenheit)
+
+      temperature1.innerHTML = Fahrenheit
       humidity1.innerHTML = data.list[0].main.humidity
       
+      //Kelvin to Fahrenheit Day 2
+      var tempKelvin2 = data.list[7].main.temp
+      var tempCelsius2 = tempKelvin2 - 273;
+      var tempFahrenheit2 = tempCelsius2 * (9/5) + 32;
+      var Fahrenheit2 = Math.floor(tempFahrenheit2)
+
       // date2.innerHTML = 
-      temperature2.innerHTML = data.list[7].main.temp
+      temperature2.innerHTML = Fahrenheit2
       humidity2.innerHTML = data.list[7].main.humidity
 
+
+            //Kelvin to Fahrenheit Day
+      var tempKelvin3 = data.list[14].main.temp
+      var tempCelsius3 = tempKelvin3 - 273;
+      var tempFahrenheit3 = tempCelsius3 * (9/5) + 32;
+      var Fahrenheit3 = Math.floor(tempFahrenheit3)
+      
       // date3.innerHTML = 
-      temperature3.innerHTML = data.list[14].main.temp
+      temperature3.innerHTML = Fahrenheit3
       humidity3.innerHTML = data.list[14].main.humidity
 
+
+            //Kelvin to Fahrenheit Day
+      var tempKelvin4= data.list[22].main.temp
+      var tempCelsius4 = tempKelvin4 - 273;
+      var tempFahrenheit4 = tempCelsius4 * (9/5) + 32;
+      var Fahrenheit4 = Math.floor(tempFahrenheit4)
+      
       // date4.innerHTML = 
-      temperature4.innerHTML = data.list[22].main.temp
+      temperature4.innerHTML = Fahrenheit4
       humidity4.innerHTML = data.list[22].main.humidity
 
+
+      //Kelvin to Fahrenheit Day
+      var tempKelvin5 = data.list[30].main.temp
+      var tempCelsius5 = tempKelvin5 - 273;
+      var tempFahrenheit5 = tempCelsius5 * (9/5) + 32;
+      var Fahrenheit5 = Math.floor(tempFahrenheit5)
+      
       // date5.innerHTML = 
-      temperature5.innerHTML = data.list[30].main.temp
+      temperature5.innerHTML = Fahrenheit5
       humidity5.innerHTML = data.list[30].main.humidity
 
     })
