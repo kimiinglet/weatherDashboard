@@ -62,7 +62,7 @@ var searchBtn = $("#searchB");
 // let searchBtn = document.getElementById("searchB")
 
 //when the document loads ->
-$(document).ready(function(){
+$(document).ready(function cityInputed(){
 
     //listening for a click on search button
     searchBtn.on("click", function(e){
@@ -194,7 +194,9 @@ searchBtn.on("click", function(e){
   // buttons onclick
 
   austinEl.click(function() {
+    var city = 
     console.log("Austin Clicked!")
+
 
   })
 
