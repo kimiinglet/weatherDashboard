@@ -72,7 +72,7 @@ $(document).ready(function(){
       let city = e.currentTarget.previousElementSibling.value
 
       // construct a url for api from the information we got from the html input
-      let queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${APIKey}`
+      let queryURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${APIKey}`
  
 
       // Perform our AJAX GET request with our url
@@ -98,7 +98,7 @@ $(document).ready(function(){
           let long = data.coord.lon
           let lat = data.coord.lat
 
-            let uvIndexURL = `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${long}&appid=${APIKey}`
+            let uvIndexURL = `http://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${long}&appid=${APIKey}`
 
             //Perform AJAX for uvIndex
               $.ajax({
@@ -125,7 +125,7 @@ searchBtn.on("click", function(e){
     let city = e.currentTarget.previousElementSibling.value
 
     // 
-    let queryForcast = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIKey}`
+    let queryForcast = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIKey}`
 
     // construct a url for api from the information we got from the html input
     $.ajax({
