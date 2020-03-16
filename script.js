@@ -85,7 +85,14 @@ $(document).ready(function(){
       // After the data comes back from the API
       .then(function(data) {
         cityEl.innerHTML = data.name
-        temperature.innerHTML = data.main.temp
+
+        //Kelvin to Fahrenheit
+        var tempKelvin= data.main.temp
+        var tempCelsius = tempKelvin - 273;
+        var tempFahrenheit = tempCelsius * (9/5) + 32;
+        var Fahrenheit = Math.floor(tempFahrenheit)
+
+        temperature.innerHTML = Fahrenheit;
         humidity.innerHTML = data.main.humidity
         windSpeed.innerHTML = data.wind.speed
               
