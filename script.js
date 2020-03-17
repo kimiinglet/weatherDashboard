@@ -138,9 +138,11 @@ searchBtn.on("click", function(e){
       var tempCelsius = tempKelvin - 273;
       var tempFahrenheit = tempCelsius * (9/5) + 32;
       var Fahrenheit = Math.floor(tempFahrenheit)
+      
 
-      temperature1.innerHTML = Fahrenheit
-      humidity1.innerHTML = data.list[0].main.humidity
+      date1.innerHTML = moment().add(1, 'days').calendar()
+      temperature1.innerHTML = Fahrenheit;
+      humidity1.innerHTML = data.list[0].main.humidity;
       
       //Kelvin to Fahrenheit Day 2
       var tempKelvin2 = data.list[7].main.temp
@@ -148,7 +150,8 @@ searchBtn.on("click", function(e){
       var tempFahrenheit2 = tempCelsius2 * (9/5) + 32;
       var Fahrenheit2 = Math.floor(tempFahrenheit2)
 
-      // date2.innerHTML = 
+      // date2.innerHTML =
+      date2.innerHTML = moment().add(2, 'days').calendar()
       temperature2.innerHTML = Fahrenheit2
       humidity2.innerHTML = data.list[7].main.humidity
 
@@ -159,7 +162,8 @@ searchBtn.on("click", function(e){
       var tempFahrenheit3 = tempCelsius3 * (9/5) + 32;
       var Fahrenheit3 = Math.floor(tempFahrenheit3)
       
-      // date3.innerHTML = 
+      // date3.innerHTML =
+      date3.innerHTML = moment().add(3, 'days').calendar()
       temperature3.innerHTML = Fahrenheit3
       humidity3.innerHTML = data.list[14].main.humidity
 
@@ -170,7 +174,8 @@ searchBtn.on("click", function(e){
       var tempFahrenheit4 = tempCelsius4 * (9/5) + 32;
       var Fahrenheit4 = Math.floor(tempFahrenheit4)
       
-      // date4.innerHTML = 
+      // date4.innerHTML =
+      date4.innerHTML = moment().add(4, 'days').calendar()
       temperature4.innerHTML = Fahrenheit4
       humidity4.innerHTML = data.list[22].main.humidity
 
@@ -181,7 +186,8 @@ searchBtn.on("click", function(e){
       var tempFahrenheit5 = tempCelsius5 * (9/5) + 32;
       var Fahrenheit5 = Math.floor(tempFahrenheit5)
       
-      // date5.innerHTML = 
+      // date5.innerHTML =
+      date5.innerHTML = moment().add(5, 'days').calendar()
       temperature5.innerHTML = Fahrenheit5
       humidity5.innerHTML = data.list[30].main.humidity
 
