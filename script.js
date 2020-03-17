@@ -140,7 +140,7 @@ searchBtn.on("click", function(e){
       var Fahrenheit = Math.floor(tempFahrenheit)
       
 
-      date1.innerHTML = moment().format("MMM Do YY");
+      date1.innerHTML = moment().add(1, 'days').calendar()
       temperature1.innerHTML = Fahrenheit;
       humidity1.innerHTML = data.list[0].main.humidity;
       

@@ -3,24 +3,37 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     color: white;
+    width: 100%;
 }
 
+/*search input box*/
 #search {
     background-color: rgba(0, 0, 0, 0.75);
+    margin: 5px;
+    width: 100%;
+    height: auto;
 }
+
+/* search button */
+#searchB {
+    margin: 5px;
+    background-color: rgba(122, 115, 115, 0.747);
+    color: white;
+}
+
 
 #searchAndBtns {
     background-color: rgba(2, 2, 2, 0.75);
     color: white;
-    width: 40%;
+    width: 50%;
 
 }
 
 #todayFromSearch {
     background-color: rgba(2, 2, 2, 0.75);
     color: white;
-    width: 30%;
-
+    width: 40%;
+    text-align: center;
 
 }
 
@@ -31,43 +44,58 @@ body {
     margin-right: 5px;
 }
 
-#5dayBox {
-    margin: 10px;
-    padding: 10px;
+/* 5 day div */
+#fiveDayBox {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
 }
-
 
 /* forecast day 1 */
 #dayBox1 {
     background-color: rgba(2, 2, 2, 0.75);
     color: white;
+    text-align: center;
+    width: auto;
+    margin-bottom: 3px;
+    margin-top: 3px;
 }
 
 /* forecast day 2 */
 #dayBox2 {
     background-color: rgba(2, 2, 2, 0.75);
     color: white;
+    text-align: center;
+    width: auto;
+    margin-bottom: 3px;
+    margin-top: 3px;
 }
 
 /* forecast day 3 */
 #dayBox3 {
     background-color: rgba(2, 2, 2, 0.75);
     color: white;
+    text-align: center;
+    margin-bottom: 3px;
+    margin-top: 3px;
 }
 
 /* forecast day 4 */
 #dayBox4 {
     background-color: rgba(2, 2, 2, 0.75);
     color: white;
+    text-align: center;
+    margin-bottom: 3px;
+    margin-top: 3px;
 }
 
 /* forecast day 5 */
 #dayBox5 {
     background-color: rgba(2, 2, 2, 0.75);
     color: white;
-}
-
-#searchB {
-    margin: 5px;
+    text-align: center;
+    margin-bottom: 3px;
+    margin-top: 3px;
 
 }
