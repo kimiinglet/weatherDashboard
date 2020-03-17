@@ -26,23 +26,23 @@ var uvIndex = document.getElementById("uvIndex");
 
 // variables for 5 day
 // variables for day 1
-var date1 = document.getElementById("day1");
+var date1 = document.getElementById("date1");
 var temperature1 = document.getElementById("temp1");
 var humidity1 = document.getElementById("humidity1");
 // variables for day 2
-var date2 = document.getElementById("day2");
+var date2 = document.getElementById("date2");
 var temperature2 = document.getElementById("temp2");
 var humidity2 = document.getElementById("humidity2");
 // variables for day 3
-var date3 = document.getElementById("day3");
+var date3 = document.getElementById("date3");
 var temperature3 = document.getElementById("temp3");
 var humidity3 = document.getElementById("humidity3");
 // variables for day 4
-var date4 = document.getElementById("day4");
+var date4 = document.getElementById("date4");
 var temperature4 = document.getElementById("temp4");
 var humidity4 = document.getElementById("humidity4");
 // variables for day 5
-var date5 = document.getElementById("day5");
+var date5 = document.getElementById("date5");
 var temperature5 = document.getElementById("temp5");
 var humidity5 = document.getElementById("humidity5");
 
