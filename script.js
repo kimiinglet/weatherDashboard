@@ -11,11 +11,11 @@ function getSearchMethod(searchTerm) {
 
 
 // city buttons
-var austinEl = $("#Austin");
-var chicagoEl = $("#Chicago");
-var atlantaEl = $("#Atlanta");
-var houstonEl = $("#Houston");
-var sfoEl = $("#sfo");
+// var austinEl = $("#Austin");
+// var chicagoEl = $("#Chicago");
+// var atlantaEl = $("#Atlanta");
+// var houstonEl = $("#Houston");
+// var sfoEl = $("#sfo");
 
 // variables for one day
 var cityEl = document.getElementById("cityInputed")
@@ -140,7 +140,7 @@ searchBtn.on("click", function(e){
       var Fahrenheit = Math.floor(tempFahrenheit)
       
 
-      date1.innerHTML = moment().add(1, 'days').calendar()
+      date1.innerHTML = moment().format("MMM Do YY");
       temperature1.innerHTML = Fahrenheit;
       humidity1.innerHTML = data.list[0].main.humidity;
       
@@ -198,29 +198,25 @@ searchBtn.on("click", function(e){
 
   // buttons onclick
 
-  austinEl.click(function() {
-    console.log("Austin Clicked!")
-    
+  // austinEl.click(function() {
+  //   console.log("Austin Clicked!")
+  // })
 
-  })
+  // chicagoEl.click(function() {
+  //   console.log("Chicago Clicked!")
+  // })
 
-  chicagoEl.click(function() {
-    console.log("Chicago Clicked!")
-  })
+  // atlantaEl.click(function() {
+  //   console.log("Atlanta Clicked!")
+  // })
 
-  atlantaEl.click(function() {
-    console.log("Atlanta Clicked!")
+  // houstonEl.click(function() {
+  //   console.log("Houston Clicked!")
+  // })
 
-  })
-
-  houstonEl.click(function() {
-    console.log("Houston Clicked!")
-
-  })
-
-  sfoEl.click(function() {
-    console.log("San Francisco Clicked!")
-  })
+  // sfoEl.click(function() {
+  //   console.log("San Francisco Clicked!")
+  // })
 
 })
 
