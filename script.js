@@ -109,8 +109,6 @@ $(document).ready(function cityInputed(){
                 uvIndex.innerHTML = data.value
               }
             )
-
-
 })
 })
 
@@ -195,9 +193,8 @@ searchBtn.on("click", function(e){
   // buttons onclick
 
   austinEl.click(function() {
-    var city = 
     console.log("Austin Clicked!")
-
+    
 
   })
 
